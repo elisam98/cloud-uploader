@@ -9,7 +9,7 @@ server.get('/hello/:name', (req, res, next)=> {
 	next();
 });
 
-server.put('/recordings', (req, res, send)=> {
+server.put('/', (req, res, send)=> {
 	console.log(req.body);
 	res.send(req.body);
 });
