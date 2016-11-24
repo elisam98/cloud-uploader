@@ -9,9 +9,9 @@ server.get('/hello/:name', (req, res, next)=> {
 	next();
 });
 
-server.put('/', (req, res, send)=> {
+server.put('/upload/:filename', (req, res, send)=> {
 	console.log(req.body);
-	res.send(req.body);
+	res.send(req.params.filename);
 });
 
 server.listen(8001, function() {
