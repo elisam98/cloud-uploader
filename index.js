@@ -11,6 +11,7 @@ server.get('/hello/:name', (req, res, next)=> {
 
 server.put('/upload/:filename', (req, res, send)=> {
 	console.log(req.body);
+	console.log(req.params.filename);
 	res.send(req.params.filename);
 });
 
