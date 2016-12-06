@@ -9,6 +9,7 @@
   "author": "SafeTelecom, Inc.",
   "license": "ISC",
   "dependencies": {
+    "busboy": "^0.2.13",
     "restify": "^4.3.0"
   }
 }
