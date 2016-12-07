@@ -1,5 +1,5 @@
 var restify = require('restify');
-var fs = require("fs");
+// var fs = require("fs");
 var storage = require('@google-cloud/storage');
 
 var gcs = storage({
@@ -12,11 +12,6 @@ var bucket = gcs.bucket('mytickets-records');
 var server = restify.createServer();
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
-
-server.get('/hello/:name', (req, res, next)=> {
-	res.send('hello ' + req.params.name);
-	next();
-});
 
 server.put('/upload/:filename', (req, res, send)=> {
 //	console.log(req.body);
